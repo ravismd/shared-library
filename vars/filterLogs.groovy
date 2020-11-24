@@ -7,5 +7,6 @@ def call(String filter_string, int occurrence) {
     int count = StringUtils.countMatches(logs, filter_string);
     if (count > occurrence -1) {
         currentBuild.result='UNSTABLE'
+        currentBuild.description = 'Build is success but to carry out the shared library we manually tweeked'
     }
 }
